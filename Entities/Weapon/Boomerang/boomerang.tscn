@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bocafsn75jjhw"]
+
+[ext_resource type="Script" uid="uid://bvfj4j5hk21vu" path="res://Entities/Weapon/Boomerang/boomerang_throw.gd" id="1_glyj3"]
+[ext_resource type="Texture2D" uid="uid://dexo7ofqlihem" path="res://Assets/Weapons/boomerang.png" id="2_wwumh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wwumh"]
+radius = 23.0868
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_glyj3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7, 21)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wwumh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(9, 22)
+shape = SubResource("CircleShape2D_wwumh")
